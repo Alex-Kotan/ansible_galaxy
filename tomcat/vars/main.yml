@@ -1,0 +1,4 @@
+---
+# vars file for tomcat
+src: /home/kotov/homework/mvn/files
+dst: /var/lib/tomcat8/webapps

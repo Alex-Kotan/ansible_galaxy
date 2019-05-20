@@ -1,0 +1,22 @@
+---
+# tasks file for mvn
+- name: install soft
+  apt: name={{item}} state=installed
+  with_items:
+    - git
+    - maven
+    - openjdk-8-jdk
+
+- name: download from github
+  git:
+   repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+   dest: /home/kotov/b_fuse
+   clone: yes
+
+- name: compile java
+  shell: mvn install
+  args:
+   chdir: /home/kotov/b_fuse
+    
+- name: copy war
+  fetch: dest={{dst}}/hello-1.0.war src={{src}}/hello-1.0.war flat=yes

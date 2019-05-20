@@ -1,0 +1,5 @@
+---
+# vars file for mvn
+src: /home/kotov/b_fuse/target 
+dst: /home/kotov/homework/mvn/files
+rep: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git

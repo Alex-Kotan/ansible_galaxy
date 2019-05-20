@@ -1,0 +1,13 @@
+- name: compiler config
+  hosts: db
+  become: yes
+
+  roles:
+   - mvn
+
+- name: tomcat config
+  hosts: web
+  become: yes
+
+  roles:
+   - tomcat
